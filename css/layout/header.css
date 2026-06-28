@@ -44,8 +44,12 @@
 }
 
 /* ── Navigation ── */
+@media (min-width: 768px) {
+  .c-nav__list {
+    display: flex;
+  }
+}
 .c-nav__list {
-  display: flex;
   align-items: center;
   gap: var(--space-1);
 }
@@ -68,8 +72,12 @@
 }
 
 /* ── Mobile toggle ── */
+@media (min-width: 768px) {
+  .c-nav-toggle {
+    display: none;
+  }
+}
 .c-nav-toggle {
-  display: none;
   width: 2.5rem;
   height: 2.5rem;
   padding: var(--space-1-5);
@@ -83,6 +91,11 @@
 }
 
 /* ── Resume button in header ── */
+@media (min-width: 768px) {
+  .c-header__resume {
+    display: inline-flex;
+  }
+}
 .c-header__resume {
   margin-left: var(--space-2);
 }

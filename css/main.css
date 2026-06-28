@@ -1,18 +1,22 @@
 /* ============================================================
    CSS MANIFEST
    Sprint 1: Design System Entry Point
+   Sprint 12: Cascade fix — responsive.css moved after sections
    ============================================================
    Layer: main.css
    Purpose: Single CSS entry point. Imports all stylesheets
             in dependency order. The only CSS file linked
             from index.html.
+
+   IMPORTANT: responsive.css is imported LAST so its
+   mobile-first base overrides and min-width breakpoints
+   can override all component/section defaults.
    ============================================================ */
 
 /* ── Layer 0: Base (no dependencies) ── */
 @import "./base/reset.css";
 @import "./base/variables.css";
 @import "./base/typography.css";
-@import "./base/responsive.css";
 @import "./base/a11y.css";
 
 /* ── Layer 1: Layout (depends on variables.css) ── */
@@ -42,7 +46,10 @@
 @import "./sections/contact.css";
 @import "./sections/social.css";
 
-/* ── Layer 4: Future imports ── */
+/* ── Layer 4: Responsive overrides (MUST load last) ── */
+@import "./base/responsive.css";
+
+/* ── Layer 5: Future imports ── */
 /* @import "./themes/light.css"; */
 /* @import "./themes/dark.css"; */
 /* ... */

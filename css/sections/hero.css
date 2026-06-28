@@ -1,23 +1,45 @@
 /* ============================================================
    SECTION — Hero
-   Sprint 6: Portfolio Sections
+   Sprint 13: Premium Hero Redesign
+   ============================================================
+   DOM: .hero-wrapper > .hero (text | image) + .hero__actions + .hero__stats
+   The wrapper is a flex column; grid is centered 2-col.
+   CTAs and stats span full width below the grid, centered.
    ============================================================ */
 
 #section-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: auto;            /* let content determine height — no forced 100vh */
   display: flex;
   align-items: center;
   background: var(--gradient-hero);
   overflow: hidden;
 }
 
-/* ── Hero content layout: 2 columns ── */
-#section-hero .hero {
+/* Override .l-section padding — hero-wrapper handles its own spacing */
+#section-hero .l-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* ── Outer wrapper: flex column, centered ── */
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding: var(--space-8) var(--container-padding);   /* 32px top/bottom — tight */
+  gap: var(--space-6);        /* 24px between grid / CTAs / stats */
+}
+
+/* ── Two-column grid: text (left) | image (right) ── */
+.hero-wrapper .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: var(--space-12);
+  gap: var(--space-8);         /* 32px — balanced, not wasteful */
   width: 100%;
 }
 
@@ -25,66 +47,60 @@
 .hero__text {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-2);          /* 8px — tight, premium vertical rhythm */
+  max-width: 40rem;
 }
 
+/* Greeting — small, subtle, above the name */
+.hero__greeting {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);         /* 14px */
+  font-weight: var(--weight-normal);
+  color: var(--color-text-tertiary);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  margin-bottom: var(--space-1);     /* 4px — slight breathing before name */
+}
+
+/* H1 — Name (large gradient heading) */
 .hero__heading {
-  font-size: var(--text-fluid-4xl);
+  font-size: var(--text-fluid-4xl);  /* clamp(3rem, 8vw, 4.5rem) */
   font-weight: var(--weight-extrabold);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
+  color: var(--color-text-primary);
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
+@supports not (background-clip: text) {
+  .hero__heading {
+    color: var(--color-primary-light);
+  }
+}
+
+/* Role — monospace uppercase, below name */
 .hero__role {
   font-family: var(--font-mono);
-  font-size: var(--text-md);
+  font-size: var(--text-fluid-sm);       /* fluid 14-16px */
   font-weight: var(--weight-medium);
   color: var(--color-primary-light);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
+  margin-top: var(--space-1);
 }
 
+/* Tagline — readable body, below role */
 .hero__tagline {
-  font-size: var(--text-lg);
+  font-size: var(--text-fluid-base);     /* fluid 16-18px */
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
-  max-width: 36rem;
-}
-
-/* ── CTA Actions ── */
-.hero__actions {
-  display: flex;
-  gap: var(--space-3);
-  padding-top: var(--space-2);
-}
-
-/* ── Stats ── */
-.hero__stats {
-  display: flex;
-  gap: var(--space-8);
-  padding-top: var(--space-4);
-}
-
-.hero__stat {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
-
-.hero__stat-value {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: var(--weight-bold);
-  color: var(--color-primary-light);
-}
-
-.hero__stat-label {
-  font-size: var(--text-sm);
-  color: var(--color-text-tertiary);
+  max-width: 34rem;
+  margin-top: var(--space-3);
 }
 
 /* ── Image Column ── */
@@ -95,10 +111,52 @@
 }
 
 .hero__image img {
-  width: 100%;
+  width: min(100%, 380px);
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-glow-primary);
-  border: var(--border-thin) solid hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.25);
+  box-shadow: 0 0 60px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.15);
+  border: var(--border-thin) solid hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.12);
+}
+
+/* ── CTA Buttons (below grid, full-width, centered) ── */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+/* ── Stats (below CTAs, full-width, centered) ── */
+.hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-6) var(--space-10);   /* row-gap 24, column-gap 40 */
+  width: 100%;
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-0-5);
+  min-width: 80px;
+}
+
+.hero__stat-value {
+  font-family: var(--font-display);
+  font-size: var(--text-fluid-xl);       /* fluid 24-36px */
+  font-weight: var(--weight-bold);
+  color: var(--color-primary-light);
+  line-height: var(--leading-tight);
+}
+
+.hero__stat-label {
+  font-size: var(--text-xs);             /* 12px */
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  white-space: nowrap;
 }

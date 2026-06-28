@@ -11,7 +11,7 @@
   <a href="#quick-start"><strong>Quick Start</strong></a> →
   <a href="#portfolio-owner-guide"><strong>Customize</strong></a> →
   <a href="#deployment">Deploy</a> →
-  <a href="https://github.com/alexrivera/template-portofolio">Repository</a>
+  <a href="https://github.com/yukitsune/template-portofolio">Repository</a>
 </p>
 
 <br>
@@ -119,7 +119,7 @@ Your portfolio updates in ~2 minutes.
 ```
 template-portofolio/
 │
-├── 📄 index.html                  # The only HTML file — DO NOT EDIT (unless adding sections)
+├── 📄 index.html                  # EDITITABLE IF YOU NEED
 ├── 📄 data.js                     # 🌟 THE ONLY FILE YOU NEED TO EDIT
 │
 ├── 📁 css/                        # All stylesheets
@@ -274,7 +274,7 @@ Open `data.js` in any text editor. Each section below shows you exactly what to 
 
 ```diff
   meta: {
--   author: "Alex Rivera",
+-   author: "Yukitsune .corp",
 +   author: "Jane Smith",
   }
 ```
@@ -285,7 +285,7 @@ Open `data.js` in any text editor. Each section below shows you exactly what to 
 
 ```diff
   meta: {
--   title: "Alex Rivera — Front-End Engineer & UI Architect",
+-   title: "Yukitsune .corp — Front-End Engineer & UI Architect",
 +   title: "Jane Smith — UX Designer & Researcher",
   }
 ```
@@ -359,9 +359,9 @@ Open `data.js` in any text editor. Each section below shows you exactly what to 
 
 ```diff
   data: {
--   image: "/assets/images/profile/alex-rivera.jpg",
+-   image: "/assets/images/profile/yukitsune.jpg",
 +   image: "/assets/images/profile/jane-smith.jpg",
--   imageAlt: "Alex Rivera professional headshot",
+-   imageAlt: "Yukitsune .corp professional headshot",
 +   imageAlt: "Jane Smith professional headshot",
   }
 ```
@@ -845,7 +845,7 @@ Remove the entire project object:
 
 ```diff
   data: {
--   email:        "alex@alexrivera.dev",
+-   email:        "contact@yukitsune.dev",
 +   email:        "jane@janesmith.dev",
 -   location:     "San Francisco, CA",
 +   location:     "Austin, TX",
@@ -860,7 +860,7 @@ Remove the entire project object:
     cta: {
 -     label:  "Get In Touch",
 +     label:  "Hire Me",
--     action: "mailto:alex@alexrivera.dev",
+-     action: "mailto:contact@yukitsune.dev",
 +     action: "https://calendly.com/janesmith/30min",
     }
   }
@@ -879,9 +879,9 @@ Remove the entire project object:
 
 ```diff
   links: [
-    { platform: "GitHub",    username: "@alexrivera", url: "https://github.com/alexrivera"   },
-    { platform: "LinkedIn",  username: "@alexrivera", url: "https://linkedin.com/in/alexrivera" },
--   { platform: "Twitter",   username: "@alexrivera", url: "https://twitter.com/alexrivera"  },
+    { platform: "GitHub",    username: "@yukitsune", url: "https://github.com/yukitsune"   },
+    { platform: "LinkedIn",  username: "@yukitsune", url: "https://linkedin.com/in/yukitsune" },
+-   { platform: "Twitter",   username: "@yukitsune", url: "https://twitter.com/yukitsune"  },
 +   { platform: "Twitter",   username: "@janesmith",  url: "https://twitter.com/janesmith"   },
 +   { platform: "Dribbble",  username: "@janesmith",  url: "https://dribbble.com/janesmith"  },
 +   { platform: "YouTube",   username: "@janesmith",  url: "https://youtube.com/@janesmith"  },
@@ -962,13 +962,13 @@ Remove the entire project object:
 
 ```diff
   meta: {
--   title:        "Alex Rivera — Front-End Engineer & UI Architect",
+-   title:        "Yukitsune .corp — Front-End Engineer & UI Architect",
 +   title:        "Jane Smith — UX Designer & Researcher",
--   description:  "Portfolio of Alex Rivera, specializing in design systems...",
+-   description:  "Portfolio of Yukitsune .corp, specializing in design systems...",
 +   description:  "Portfolio of Jane Smith, UX designer specializing in healthcare, education, and fintech products.",
--   url:          "https://alexrivera.dev",
+-   url:          "https://yukitsune.dev",
 +   url:          "https://janesmith.dev",
--   author:       "Alex Rivera",
+-   author:       "Yukitsune .corp",
 +   author:       "Jane Smith",
   }
 ```

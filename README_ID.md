@@ -11,7 +11,7 @@
   <a href="#mulai-cepat"><strong>Mulai Cepat</strong></a> →
   <a href="#panduan-pemilik-portofolio"><strong>Kustomisasi</strong></a> →
   <a href="#deployment">Deploy</a> →
-  <a href="https://github.com/alexrivera/template-portofolio">Repositori</a>
+  <a href="https://github.com/yukitsune/template-portofolio">Repositori</a>
 </p>
 
 <br>
@@ -119,7 +119,7 @@ Portofolio Anda akan diperbarui dalam ~2 menit.
 ```
 template-portofolio/
 │
-├── 📄 index.html                  # Satu-satunya file HTML — JANGAN DIEDIT (kecuali menambah bagian)
+├── 📄 index.html                  # Silahkan edit jika perlu
 ├── 📄 data.js                     # 🌟 SATU-SATUNYA FILE YANG PERLU ANDA EDIT
 │
 ├── 📁 css/                        # Semua stylesheet
@@ -274,7 +274,7 @@ Buka `data.js` di editor teks apa pun. Setiap bagian di bawah ini menunjukkan pe
 
 ```diff
   meta: {
--   author: "Alex Rivera",
+-   author: "Yukitsune .corp",
 +   author: "Budi Santoso",
   }
 ```
@@ -285,7 +285,7 @@ Buka `data.js` di editor teks apa pun. Setiap bagian di bawah ini menunjukkan pe
 
 ```diff
   meta: {
--   title: "Alex Rivera — Front-End Engineer & UI Architect",
+-   title: "Yukitsune .corp — Front-End Engineer & UI Architect",
 +   title: "Budi Santoso — UI/UX Designer",
   }
 ```
@@ -352,9 +352,9 @@ Buka `data.js` di editor teks apa pun. Setiap bagian di bawah ini menunjukkan pe
 
 ```diff
   data: {
--   image: "/assets/images/profile/alex-rivera.jpg",
+-   image: "/assets/images/profile/yukitsune.jpg",
 +   image: "/assets/images/profile/budi-santoso.jpg",
--   imageAlt: "Foto profesional Alex Rivera",
+-   imageAlt: "Foto profesional Yukitsune .corp",
 +   imageAlt: "Foto profesional Budi Santoso",
   }
 ```
@@ -770,7 +770,7 @@ Cukup hapus barisnya:
 
 ```diff
   data: {
--   email:        "alex@alexrivera.dev",
+-   email:        "contact@yukitsune.dev",
 +   email:        "budi@budisantoso.dev",
 -   location:     "San Francisco, CA",
 +   location:     "Jakarta, Indonesia",
@@ -783,7 +783,7 @@ Cukup hapus barisnya:
     cta: {
 -     label:  "Hubungi Saya",
 +     label:  "Rekrut Saya",
--     action: "mailto:alex@alexrivera.dev",
+-     action: "mailto:contact@yukitsune.dev",
 +     action: "https://calendly.com/budi/30min",
     }
   }
@@ -848,13 +848,13 @@ Cukup hapus barisnya:
 
 ```diff
   meta: {
--   title:        "Alex Rivera — Front-End Engineer & UI Architect",
+-   title:        "Yukitsune .corp — Front-End Engineer & UI Architect",
 +   title:        "Budi Santoso — UI/UX Designer",
--   description:  "Portfolio of Alex Rivera, specializing in design systems...",
+-   description:  "Portfolio of Yukitsune .corp, specializing in design systems...",
 +   description:  "Portfolio Budi Santoso, UI/UX designer spesialis kesehatan, pendidikan, dan fintech.",
--   url:          "https://alexrivera.dev",
+-   url:          "https://yukitsune.dev",
 +   url:          "https://budisantoso.dev",
--   author:       "Alex Rivera",
+-   author:       "Yukitsune .corp",
 +   author:       "Budi Santoso",
   }
 ```

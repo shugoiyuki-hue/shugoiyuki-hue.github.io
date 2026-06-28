@@ -25,9 +25,9 @@
     padding-right: var(--space-8);
   }
 
-  /* ── Hero stats side-by-side ── */
+  /* ── Hero: stats spread out more ── */
   .hero__stats {
-    gap: var(--space-10);
+    gap: var(--space-6) var(--space-10);
   }
 
   /* ── Footer returns to row ── */
@@ -78,20 +78,23 @@
 
   /* ═══ HERO ═══ */
 
-  #section-hero {
-    min-height: 100vh;
+  .hero-wrapper {
     padding-top: 0;
     padding-bottom: 0;
+    gap: var(--space-6);
   }
 
-  #section-hero .hero {
+  .hero-wrapper .hero {
     grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
     text-align: left;
   }
 
+  /* Text first (left), image second (right) */
   .hero__text {
     order: 1;
     align-items: flex-start;
+    max-width: none;
   }
 
   .hero__image {
@@ -99,19 +102,16 @@
   }
 
   .hero__image img {
-    width: min(100%, 400px);
-  }
-
-  .hero__actions {
-    justify-content: flex-start;
-  }
-
-  .hero__stats {
-    justify-content: flex-start;
+    width: min(100%, 320px);
   }
 
   .hero__tagline {
-    max-width: 36rem;
+    max-width: 34rem;
+  }
+
+  /* Stats — still centered but values slightly larger */
+  .hero__stat-value {
+    font-size: var(--text-fluid-xl);
   }
 
   /* ═══ ABOUT ═══ */
@@ -210,8 +210,20 @@
 
   /* ═══ HERO ═══ */
 
-  #section-hero .hero {
-    gap: var(--space-16);
+  .hero-wrapper {
+    gap: var(--space-8);
+  }
+
+  .hero-wrapper .hero {
+    gap: var(--space-10);
+  }
+
+  .hero__heading {
+    font-size: var(--text-fluid-4xl);  /* full size at 1024+ */
+  }
+
+  .hero__image img {
+    width: min(100%, 360px);
   }
 
   /* ═══ ABOUT ═══ */
@@ -276,8 +288,20 @@
 
   /* ═══ HERO ═══ */
 
-  #section-hero .hero {
-    gap: var(--space-20);
+  .hero-wrapper {
+    gap: var(--space-10);
+  }
+
+  .hero-wrapper .hero {
+    gap: var(--space-12);
+  }
+
+  .hero__tagline {
+    font-size: var(--text-lg);
+  }
+
+  .hero__image img {
+    width: min(100%, 400px);
   }
 
   /* ═══ ABOUT ═══ */
@@ -341,15 +365,17 @@
 
   /* ═══ HERO ═══ */
 
-  /* Hero image gets more breathing room */
-  #section-hero .hero {
+  .hero-wrapper {
     max-width: var(--container-2xl);
-    margin-inline: auto;
-    gap: var(--space-24);
+    gap: var(--space-12);
+  }
+
+  .hero-wrapper .hero {
+    gap: var(--space-16);
   }
 
   .hero__image img {
-    width: min(100%, 480px);
+    width: min(100%, 440px);
   }
 
   /* ═══ ABOUT ═══ */
@@ -405,9 +431,8 @@
 }
 
 /* ════════════════════════════════════════════════════════
-   MOBILE-FIRST BASE OVERRIDES (≤359px / tiny phones)
-   These apply as the base state, ensuring nothing breaks
-   on the smallest screens.
+   MOBILE-FIRST BASE OVERRIDES (≤767px base state)
+   These are the base styles, overridden by min-width queries above.
    ════════════════════════════════════════════════════════ */
 
 /* ── Card images stay proportional ── */
@@ -452,39 +477,71 @@
   height: 12px;
 }
 
-/* ── Hero section — stacked by default ── */
+/* ── HERO — Stacked, text-first ── */
 #section-hero {
   min-height: auto;
-  padding-top: var(--space-20);
-  padding-bottom: var(--space-16);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-#section-hero .hero {
+/* Wrapper — tight gap for mobile */
+.hero-wrapper {
+  padding-top: var(--space-6);   /* 24px — just enough breathing room */
+  padding-bottom: var(--space-4);
+  gap: var(--space-4);
+}
+
+/* Single column grid */
+.hero-wrapper .hero {
   grid-template-columns: 1fr;
+  gap: var(--space-4);           /* 16px between text and image */
   text-align: center;
 }
 
+/* TEXT FIRST */
 .hero__text {
-  order: 2;
+  order: 1;
   align-items: center;
+  max-width: 100%;
 }
 
+/* Greeting stays small on mobile */
+.hero__greeting {
+  font-size: var(--text-xs);
+}
+
+/* Name — scaled down to prevent overflow with long names */
+.hero__heading {
+  font-size: var(--text-fluid-3xl);
+}
+
+/* Image after text */
 .hero__image {
-  order: 1;
+  order: 2;
 }
 
 .hero__image img {
-  width: min(70%, 240px);
+  width: min(50%, 180px);
 }
 
-.hero__actions {
-  justify-content: center;
-  flex-wrap: wrap;
+/* Full-width buttons on mobile */
+.hero__actions .c-btn {
+  flex: 0 0 100%;
+  max-width: 100%;
+  min-width: unset;
 }
 
-.hero__stats {
-  justify-content: center;
-  gap: var(--space-6);
+@media (min-width: 390px) {
+  .hero__actions .c-btn {
+    flex: 0 0 auto;
+    max-width: none;
+    width: auto;
+  }
+}
+
+/* Stats smaller on mobile */
+.hero__stat-value {
+  font-size: var(--text-xl);
 }
 
 .hero__tagline {
