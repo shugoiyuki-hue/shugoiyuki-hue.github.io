@@ -51,60 +51,6 @@ const portfolioData = {
           l: 96
         },
       
-        success: {
-          h: 160,
-          s: 65,
-          l: 45
-        },
-      
-        warning: {
-          h: 40,
-          s: 100,
-          l: 60
-        },
-      
-        danger: {
-          h: 0,
-          s: 80,
-          l: 60
-        },
-      
-        background: {
-          h: 210,
-          s: 30,
-          l: 99
-        },
-      
-        surface: {
-          h: 0,
-          s: 0,
-          l: 100
-        },
-      
-        surfaceAlt: {
-          h: 210,
-          s: 25,
-          l: 97
-        },
-      
-        border: {
-          h: 214,
-          s: 32,
-          l: 91
-        },
-      
-        text: {
-          h: 222,
-          s: 47,
-          l: 11
-        },
-      
-        textSecondary: {
-          h: 215,
-          s: 16,
-          l: 47
-        },
-      
         fontHeading:
           "\"Plus Jakarta Sans\", \"Inter\", sans-serif",
       
