@@ -1,0 +1,169 @@
+/* ============================================================
+   LIGHT THEME
+   Overrides base/variables.css
+   ============================================================ */
+
+:root {
+
+  /* ========================================================
+     PRIMARY
+     ======================================================== */
+
+  --color-primary-h: 213;
+  --color-primary-s: 93%;
+  --color-primary-l: 56%;
+
+  --color-primary-light: hsl(213,93%,68%);
+  --color-primary-lighter: hsl(213,93%,90%);
+  --color-primary-dark: hsl(213,93%,45%);
+  --color-primary-darker: hsl(213,93%,35%);
+  --color-primary-contrast: #ffffff;
+
+  /* ========================================================
+     SECONDARY
+     ======================================================== */
+
+  --color-secondary-h: 205;
+  --color-secondary-s: 90%;
+  --color-secondary-l: 72%;
+
+  --color-secondary-light: hsl(205,90%,80%);
+  --color-secondary-lighter: hsl(205,90%,92%);
+  --color-secondary-dark: hsl(205,90%,58%);
+  --color-secondary-darker: hsl(205,90%,45%);
+  --color-secondary-contrast: #ffffff;
+
+  /* ========================================================
+     ACCENT
+     ======================================================== */
+
+  --color-accent-h: 210;
+  --color-accent-s: 100%;
+  --color-accent-l: 96%;
+
+  --color-accent-light: hsl(210,100%,98%);
+  --color-accent-lighter: hsl(210,100%,99%);
+  --color-accent-dark: hsl(210,65%,88%);
+  --color-accent-contrast: hsl(220,20%,18%);
+
+  /* ========================================================
+     BACKGROUND
+     ======================================================== */
+
+  --color-background-h: 210;
+  --color-background-s: 40%;
+  --color-background-l: 99%;
+
+  --color-background: hsl(210,40%,99%);
+  --color-background-alt: hsl(210,35%,97%);
+  --color-background-raised: hsl(210,30%,95%);
+
+  /* ========================================================
+     SURFACE
+     ======================================================== */
+
+  --color-surface-h: 0;
+  --color-surface-s: 0%;
+  --color-surface-l: 100%;
+
+  --color-surface: #ffffff;
+  --color-surface-hover: #f8fbff;
+  --color-surface-elevated: #ffffff;
+  --color-surface-border: #dbe7f4;
+
+  /* ========================================================
+     TEXT
+     ======================================================== */
+
+  --color-text-h: 220;
+  --color-text-s: 20%;
+
+  --color-text-primary-l: 15%;
+
+  --color-text-primary: hsl(220,20%,15%);
+  --color-text-secondary: hsl(220,15%,42%);
+  --color-text-tertiary: hsl(220,12%,60%);
+  --color-text-disabled: hsl(220,10%,72%);
+  --color-text-inverse: #ffffff;
+
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-dark);
+
+  /* ========================================================
+     GRADIENTS
+     ======================================================== */
+
+  --gradient-primary:
+    linear-gradient(135deg,#3B82F6,#7DD3FC);
+
+  --gradient-primary-reverse:
+    linear-gradient(135deg,#7DD3FC,#3B82F6);
+
+  --gradient-accent:
+    linear-gradient(135deg,#EFF6FF,#DBEAFE);
+
+  --gradient-surface:
+    linear-gradient(180deg,#ffffff,#f8fbff);
+
+  --gradient-hero:
+    radial-gradient(circle at top,#DBEAFE 0%,#EFF6FF 30%,#ffffff 75%);
+
+  /* ========================================================
+     SHADOWS
+     ======================================================== */
+
+  --shadow-xs:
+    0 1px 2px rgba(15,23,42,.04);
+
+  --shadow-sm:
+    0 2px 8px rgba(15,23,42,.05);
+
+  --shadow-md:
+    0 8px 24px rgba(15,23,42,.06);
+
+  --shadow-lg:
+    0 16px 36px rgba(15,23,42,.08);
+
+  --shadow-xl:
+    0 24px 48px rgba(15,23,42,.10);
+
+  --shadow-2xl:
+    0 36px 64px rgba(15,23,42,.12);
+
+  --shadow-card: var(--shadow-md);
+  --shadow-card-hover: var(--shadow-lg);
+
+  --shadow-button: var(--shadow-sm);
+  --shadow-button-hover: var(--shadow-md);
+
+  --shadow-navbar:
+    0 8px 32px rgba(15,23,42,.06);
+
+  --shadow-modal:
+    0 30px 80px rgba(15,23,42,.15);
+
+  --shadow-glow-primary:
+    0 0 24px rgba(59,130,246,.20);
+
+  --shadow-glow-secondary:
+    0 0 24px rgba(125,211,252,.20);
+
+  --shadow-glow-accent:
+    0 0 20px rgba(224,242,254,.50);
+
+  --shadow-glow-subtle:
+    0 0 12px rgba(59,130,246,.12);
+
+  --shadow-hero: none;
+
+  /* ========================================================
+     OVERLAY
+     ======================================================== */
+
+  --color-overlay:
+    rgba(255,255,255,.75);
+
+  --color-overlay-light:
+    rgba(255,255,255,.45);
+
+}
