@@ -22,26 +22,95 @@ const portfolioData = {
     author: "Yukitsune .corp",
     url: "https://yukitsune.corp",
     language: "en",
-    theme: "dark",
+    theme: "light",
     titleShort: "YK",
     titleSeparator: "•",
     generator: "yukitsune-portfolio-template",
 
     /* ── Fonts (Google Fonts URL) ── */
-    googleFonts: "Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700",
+    googleFonts: "Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800",
 
     /* ── Design Tokens — change colors and fonts here ── */
     design: {
-      /* Primary color — buttons, links, headings, focus outlines */
-      primary: { h: 240, s: 80, l: 60 },   // Indigo Blue
-      /* Secondary color — badges, decorative elements */
-      secondary: { h: 175, s: 70, l: 48 },   // Teal / Cyan
-      /* Accent color — highlights, hero stats, special badges, tag colors */
-      accent: { h: 40, s: 95, l: 55 },   // Amber / Warm Gold
-      /* Fonts — heading and body families */
-      fontHeading: "\"Outfit\", \"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
-      fontBody: "\"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Helvetica Neue\", sans-serif"
-    }
+        /* ===== White & Soft Blue Theme ===== */
+        primary: {
+          h: 213,
+          s: 93,
+          l: 56
+        },
+      
+        secondary: {
+          h: 205,
+          s: 90,
+          l: 72
+        },
+      
+        accent: {
+          h: 210,
+          s: 100,
+          l: 96
+        },
+      
+        success: {
+          h: 160,
+          s: 65,
+          l: 45
+        },
+      
+        warning: {
+          h: 40,
+          s: 100,
+          l: 60
+        },
+      
+        danger: {
+          h: 0,
+          s: 80,
+          l: 60
+        },
+      
+        background: {
+          h: 210,
+          s: 30,
+          l: 99
+        },
+      
+        surface: {
+          h: 0,
+          s: 0,
+          l: 100
+        },
+      
+        surfaceAlt: {
+          h: 210,
+          s: 25,
+          l: 97
+        },
+      
+        border: {
+          h: 214,
+          s: 32,
+          l: 91
+        },
+      
+        text: {
+          h: 222,
+          s: 47,
+          l: 11
+        },
+      
+        textSecondary: {
+          h: 215,
+          s: 16,
+          l: 47
+        },
+      
+        fontHeading:
+          "\"Plus Jakarta Sans\", \"Inter\", sans-serif",
+      
+        fontBody:
+          "\"Inter\", sans-serif"
+      }
   },
 
   /* ==========================================================
@@ -51,13 +120,27 @@ const portfolioData = {
     logo: "/assets/images/profile/logo.svg",
 
     navigation: [
-      { label: "About", target: "about" },
-      { label: "Skills", target: "skills" },
-      { label: "Experience", target: "experience" },
-      { label: "Projects", target: "projects" },
-      { label: "Achievements", target: "achievements" },
-      { label: "Contact", target: "contact" }
-    ],
+     {
+       label: "Home",
+       target: "hero"
+     },
+     {
+       label: "About",
+       target: "about"
+     },
+     {
+       label: "Projects",
+       target: "projects"
+     },
+     {
+       label: "Experience",
+       target: "experience"
+     },
+     {
+       label: "Contact",
+       target: "contact"
+     }
+   ],
 
     resume: {
       label: "Download Résumé",
@@ -77,21 +160,42 @@ const portfolioData = {
       id: "hero",
       type: "hero",
       visible: true,
-      heading: "Hi, I'm Yukitsune",
+      heading: "Designing Clean Digital Experiences",
       data: {
-        role:        "Portfolio Template",
-        tagline:     "A modern, accessible, and performant portfolio template — built with vanilla HTML, CSS, and JavaScript.",
+        role: "Creative Developer & UI Engineer",
+        tagline: "Crafting elegant, fast, and user-focused digital products with clean architecture, thoughtful design, and modern web technologies.",
         image: "/assets/images/profile/avatar.svg",
         imageAlt: "Portrait of Yukitsune .corp",
         actions: [
-          { label: "View My Work", target: "projects", variant: "primary" },
-          { label: "Get In Touch", target: "contact", variant: "secondary" }
-        ],
+             {
+                 label: "Explore Projects",
+                 target: "projects",
+                 variant: "primary"
+             },
+             {
+                 label: "Let's Connect",
+                 target: "contact",
+                 variant: "secondary"
+             }
+         ],
         stats: [
-          { value: "8+", label: "Years Experience" },
-          { value: "40+", label: "Projects Shipped" },
-          { value: "25+", label: "Happy Clients" }
-        ]
+             {
+                 value: "4+",
+                 label: "Years Experience"
+             },
+             {
+                 value: "25+",
+                 label: "Projects Completed"
+             },
+             {
+                 value: "15+",
+                 label: "Technologies"
+             },
+             {
+                 value: "100%",
+                 label: "Passion"
+             }
+         ]
       }
     },
 
