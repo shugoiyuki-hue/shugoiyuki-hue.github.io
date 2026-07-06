@@ -1,4 +1,4 @@
-# <img src="assets/icons/favicon.svg" alt="Logo" width="28"> Template Portofolio
+# <img src="assets/icons/favicon.svg" alt="Logo" width="28"> Template Portofolio kelas
 
 > **Template portofolio siap produksi, tanpa dependensi.**
 > Tanpa build tools. Tanpa framework. Hanya HTML, CSS, dan JavaScript.
